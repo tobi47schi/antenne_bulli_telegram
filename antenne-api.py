@@ -90,12 +90,15 @@ def telegram_send_to_channel (text) :
 
 
 while(True):
-    localtime = time.localtime()
-    now = time.strftime("%I:%M:%S %p", localtime)
-    print(die_letzten_zwei_songs())
-    if(trefferSongs()):
-        telegram_send_to_channel(die_letzten_zwei_songs() + "\n 01375 / 100 100")
-        sys.exit()
+    try:
+        localtime = time.localtime()
+        now = time.strftime("%I:%M:%S %p", localtime)
+        print(die_letzten_zwei_songs())
+        if(trefferSongs()):
+            telegram_send_to_channel(die_letzten_zwei_songs() + "\n 01375 / 100 100")
+            sys.exit()
+    except:
+        print("Exception")
     time.sleep(5)
 
 
