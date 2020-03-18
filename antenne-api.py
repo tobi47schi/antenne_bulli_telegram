@@ -88,6 +88,7 @@ def telegram_send_to_channel (text, chat_id) :
     telegram_bot_sendtext(bot_token,chat_id,text)
         
 
+telegram_send_to_channel(die_letzten_zwei_songs() + "\n 01375 / 100 100" ,  -1001363989885)
 
 while(True):
     localtime = time.localtime()
