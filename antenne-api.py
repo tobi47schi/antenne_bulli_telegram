@@ -84,10 +84,8 @@ def telegram_get_chat_ids():
     
 
 
-def telegram_send_to_channel (text) : 
-    chat_ids = telegram_get_chat_ids()
-    for chat_id in chat_ids:
-        telegram_bot_sendtext(bot_token,chat_id,text)
+def telegram_send_to_channel (text, chat_id) : 
+    telegram_bot_sendtext(bot_token,chat_id,text)
         
 
 
@@ -96,7 +94,7 @@ while(True):
     now = time.strftime("%I:%M:%S %p", localtime)
     print(now)
     if(trefferSongs()):
-        telegram_send_to_channel(die_letzten_zwei_songs() + "\n 01375 / 100 100")
+        telegram_send_to_channel(die_letzten_zwei_songs() + "\n 01375 / 100 100" ,  -1001363989885)
         sys.exit()
     time.sleep(5)
 
