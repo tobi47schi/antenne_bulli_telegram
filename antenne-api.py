@@ -92,7 +92,6 @@ while(True):
     localtime = time.localtime()
     now = time.strftime("%I:%M:%S %p", localtime)
     print(now)
-    telegram_send_to_channel(die_letzten_zwei_songs() + "\n 01375 / 100 100" ,  "-1001363989885")
     if(trefferSongs()):
         telegram_send_to_channel(die_letzten_zwei_songs() + "\n 01375 / 100 100" ,  "-1001363989885")
         sys.exit()
